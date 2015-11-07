@@ -1,0 +1,15 @@
+[
+{
+  "modid": "GrateMod",
+  "name": "Floor grates",
+  "description": "Metal Floor grates",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["1-rick"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -16,3 +16,9 @@ hs_err_pid*
 /LICENSE-fml.txt
 README.txt
 /MinecraftForge*
+/.settings
+/bin
+/build
+/.classpath
+/.gradle
+/.project
