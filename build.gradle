@@ -18,7 +18,7 @@ buildscript {
 apply plugin: 'forge'
 
 version = "0.0.1"
-group= "GrateMod.GrateMod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "GrateMod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "GrateMod"
 
 minecraft {

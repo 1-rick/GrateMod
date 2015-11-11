@@ -6,6 +6,5 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "authorList": ["1-rick"],
-  "screenshots": [],
-}
+  "screenshots": []}
 ]
