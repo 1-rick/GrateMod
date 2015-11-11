@@ -6,7 +6,11 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,8 +22,8 @@ public class GrateMod {
     public static final String VERSION = "${version}";
     public static final Logger logger = LogManager.getLogger(MODID);
 
-    public static final Grate grate_ = new Grate();
-    
+    public static final Item grate_ = new Grate();
+    public static final Block blork_ = new Blork(Material.iron);
     public GrateMod() {
         logger.info("Grate!");
     }
@@ -30,6 +34,7 @@ public class GrateMod {
         // config handling
         logger.info("GrateMod preInit");
         GameRegistry.registerItem(grate_, "grate");
+        GameRegistry.registerBlock(blork_, "Blork");
     }
 
     @EventHandler
