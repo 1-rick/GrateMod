@@ -2,6 +2,7 @@ package GrateMod;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -14,6 +15,7 @@ import net.minecraft.item.Item;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import GrateMod.common.CommonProxy;
 import GrateMod.items.Grate;
 
 @Mod(modid = GrateMod.MODID, version = GrateMod.VERSION)
@@ -28,6 +30,9 @@ public class GrateMod {
         logger.info("Grate!");
     }
 
+    @SidedProxy(clientSide="GrateMod.client.ClientProxy", serverSide="GrateMod.common.CommonProxy")
+    public static CommonProxy proxy;
+    
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         // item+block init+registering
