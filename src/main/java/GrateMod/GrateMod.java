@@ -52,5 +52,6 @@ public class GrateMod {
     public void postInit(FMLPostInitializationEvent event) {
         // some example code
         logger.info("GrateMod postInit");
+        proxy.init();
     }
 }

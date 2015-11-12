@@ -1,15 +1,18 @@
 package GrateMod.common;
 
+import GrateMod.GrateMod;
+
 public class CommonProxy {
 
+    public CommonProxy() {
+        GrateMod.logger.info("CommonProxy()");
+    }
     public void init() {
-        // TODO Auto-generated method stub
-        
+        GrateMod.logger.info("CommonProxy.init()");
     }
 
     public void registerRenderers() {
-        // TODO Auto-generated method stub
-        
+        GrateMod.logger.info("CommonProxy.registerRenderers()");
     }
 
 }
