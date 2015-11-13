@@ -19,8 +19,21 @@ public class GrateModRenderer implements ISimpleBlockRenderingHandler {
     public boolean renderWorldBlock(IBlockAccess world, int x, int y, int z, Block block, int modelId,
             RenderBlocks renderer) {
         if (modelId == renderID) {
-            renderer.setRenderBounds(0, 0.75, 0, 1.0, 1.0, 1.0);
+            renderer.setRenderBounds(0, 0.875, 0, 1.0, 1.0, 1.0);
             renderer.renderStandardBlock(block, x, y, z);
+
+            renderer.setRenderBounds(.25, 0.75, 0, .375, 0.875, 1.0);
+            renderer.renderStandardBlock(block, x, y, z);
+
+            renderer.setRenderBounds(.75, 0.75, 0, .875, 0.875, 1.0);
+            renderer.renderStandardBlock(block, x, y, z);
+/*
+            renderer.setRenderBounds(0, 0.75, 0, 1.0, 0.875, 1.0);
+            renderer.renderStandardBlock(block, x, y, z);
+
+            renderer.setRenderBounds(0, 0.75, 0, 1.0, 0.875, 1.0);
+            renderer.renderStandardBlock(block, x, y, z);
+*/            
             return true;
         }
 
