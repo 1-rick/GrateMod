@@ -5,7 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.world.IBlockAccess;
 
-public class GrateModRenderer implements ISimpleBlockRenderingHandler {
+public class BlorkRenderer implements ISimpleBlockRenderingHandler {
 
     public static int renderID = -1;
 
@@ -22,18 +22,18 @@ public class GrateModRenderer implements ISimpleBlockRenderingHandler {
             renderer.setRenderBounds(0, 0.875, 0, 1.0, 1.0, 1.0);
             renderer.renderStandardBlock(block, x, y, z);
 
-            renderer.setRenderBounds(.25, 0.75, 0, .375, 0.875, 1.0);
+            renderer.setRenderBounds(0.25, 0.75, 0, 0.3125, 0.875, 1.0);
             renderer.renderStandardBlock(block, x, y, z);
 
-            renderer.setRenderBounds(.75, 0.75, 0, .875, 0.875, 1.0);
-            renderer.renderStandardBlock(block, x, y, z);
-/*
-            renderer.setRenderBounds(0, 0.75, 0, 1.0, 0.875, 1.0);
+            renderer.setRenderBounds(0.6875, 0.75, 0, 0.75, 0.875, 1.0);
             renderer.renderStandardBlock(block, x, y, z);
 
-            renderer.setRenderBounds(0, 0.75, 0, 1.0, 0.875, 1.0);
+            renderer.setRenderBounds(0, 0.75, 0.25, 1.0, 0.875, 0.3125);
             renderer.renderStandardBlock(block, x, y, z);
-*/            
+
+            renderer.setRenderBounds(0, 0.75, 0.6875, 1.0, 0.875, 0.75);
+            renderer.renderStandardBlock(block, x, y, z);
+            
             return true;
         }
 

@@ -10,11 +10,14 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import GrateMod.blocks.GMBlocks;
 import GrateMod.common.CommonProxy;
 import GrateMod.items.Grate;
 
@@ -40,6 +43,7 @@ public class GrateMod {
         logger.info("GrateMod preInit");
         GameRegistry.registerItem(grate_, "grate");
         GameRegistry.registerBlock(blork_, "Blork");
+        GameRegistry.addShapelessRecipe(new ItemStack(GMBlocks.blork), new ItemStack(Blocks.dirt));
     }
 
     @EventHandler

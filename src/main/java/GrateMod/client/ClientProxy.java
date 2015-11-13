@@ -1,7 +1,7 @@
 package GrateMod.client;
 
 import GrateMod.GrateMod;
-import GrateMod.GrateModRenderer;
+import GrateMod.BlorkRenderer;
 import GrateMod.common.CommonProxy;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
@@ -21,9 +21,9 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void registerRenderers() {
         GrateMod.logger.info("ClientProxy.registerRenderers()");
-        GrateModRenderer.renderID = RenderingRegistry.getNextAvailableRenderId();
-        GrateMod.logger.info("    render ID: " + GrateModRenderer.renderID);
-        RenderingRegistry.registerBlockHandler(new GrateModRenderer());
+        BlorkRenderer.renderID = RenderingRegistry.getNextAvailableRenderId();
+        GrateMod.logger.info("    render ID: " + BlorkRenderer.renderID);
+        RenderingRegistry.registerBlockHandler(new BlorkRenderer());
     }
 
 }
