@@ -1,19 +1,23 @@
-package GrateMod;
+package GrateMod.blocks;
 
+import GrateMod.BlorkRenderer;
+import GrateMod.GrateMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.IIcon;
 
-public class Blork extends Block {
+public class GrateBlock extends Block {
 
     private IIcon[] icons;
 
-    protected Blork(Material mat) {
+    public GrateBlock(Material mat) {
         super(mat);
-        setBlockName("Blork");
+        setBlockName("GrateBlock");
         setBlockTextureName("GrateMod:grate-top");
         setBlockBounds(0.0F, 0.75F, 0.0F, 1.0F, 1.0F, 1.0F);
+        setCreativeTab(CreativeTabs.tabMisc);
         icons = new IIcon[3];
     }
 

@@ -17,6 +17,7 @@ import net.minecraft.item.ItemStack;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import GrateMod.blocks.GrateBlock;
 import GrateMod.blocks.GMBlocks;
 import GrateMod.common.CommonProxy;
 import GrateMod.items.Grate;
@@ -28,7 +29,7 @@ public class GrateMod {
     public static final Logger logger = LogManager.getLogger(MODID);
 
     public static final Item grate_ = new Grate();
-    public static final Block blork_ = new Blork(Material.iron);
+    public static final Block grateBlock_ = new GrateBlock(Material.iron);
     public GrateMod() {
         logger.info("Grate!");
     }
@@ -41,9 +42,9 @@ public class GrateMod {
         // item+block init+registering
         // config handling
         logger.info("GrateMod preInit");
-        GameRegistry.registerItem(grate_, "grate");
-        GameRegistry.registerBlock(blork_, "Blork");
-        GameRegistry.addShapelessRecipe(new ItemStack(GMBlocks.blork), new ItemStack(Blocks.dirt));
+     /* GameRegistry.registerItem(grate_, "grate"); */
+        GameRegistry.registerBlock(grateBlock_, "GrateBlock");
+        GameRegistry.addShapelessRecipe(new ItemStack(GMBlocks.GrateBlock), new ItemStack(Blocks.dirt));
     }
 
     @EventHandler
