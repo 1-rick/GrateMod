@@ -44,7 +44,8 @@ public class GrateMod {
         logger.info("GrateMod preInit");
      /* GameRegistry.registerItem(grate_, "grate"); */
         GameRegistry.registerBlock(grateBlock_, "GrateBlock");
-        GameRegistry.addShapelessRecipe(new ItemStack(GMBlocks.GrateBlock), new ItemStack(Blocks.dirt));
+        GameRegistry.addShapelessRecipe(new ItemStack(grateBlock_), new ItemStack(Blocks.dirt));
+        
     }
 
     @EventHandler
